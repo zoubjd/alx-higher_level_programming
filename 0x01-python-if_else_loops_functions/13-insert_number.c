@@ -18,6 +18,10 @@ if (new == NULL)
 {
 return (NULL);
 }
+if (head == NULL)
+{
+return (NULL);
+}
 new->n = number;
 new->next = NULL;
 if (head == NULL || (*head)->n >= number)
