@@ -34,7 +34,9 @@ class Square:
     def area(self):
         """Compute the area of the square."""
         return self.__size ** 2
+
     def my_print(self):
+        """this func prints the square"""
         if self.__size == 0:
             print()
         else:
