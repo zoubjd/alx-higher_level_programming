@@ -7,7 +7,6 @@ def text_indentation(text):
 
     Args:
         text: The str text.
-
     Raises:
         TypeError: If text is not a str.
     """
