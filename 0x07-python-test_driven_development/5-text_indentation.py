@@ -1,25 +1,25 @@
 #!/usr/bin/python3
-"""Module for add_integer method."""
+"""Module for text_indentation method."""
 
 
 def text_indentation(text):
-    """prints a text
+    """Method for adding 2 new lines after '.?:' chars.
 
     Args:
-        text: the text.
+        text: The str text.
 
     Raises:
-        TypeError: if text is not string.
-
+        TypeError: If text is not a str.
     """
-    split_chars = ['.', '?', ':']
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
 
-    for char in text:
-        print(char, end='')
+    for delim in ".?:":
+        # print(delim, text.split(delim))
+        text = (delim + "\n\n").join(
+            [line.strip(" ") for line in text.split(delim)])
 
-        if char in split_chars:
-            print('\n\n', end='')
-    print()
+    print(text, end="")
 
 if __name__ == "__main__":
     import doctest
