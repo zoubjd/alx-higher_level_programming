@@ -22,8 +22,8 @@ def print_square(size):
         raise ValueError("size must be >= 0")
     if size == 0:
         print("")
-    for _ in range(size):
-        print("#" * size)
+    
+    print((("#" * size) + "\n") * size)
 
 if __name__ == "__main__":
     import doctest
