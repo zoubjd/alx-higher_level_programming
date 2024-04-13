@@ -5,6 +5,7 @@
 def add_integer(a, b=98):
     """Adds two ints
 
+
     Args:
         a: the first int.
         b: the second int, default 98.
