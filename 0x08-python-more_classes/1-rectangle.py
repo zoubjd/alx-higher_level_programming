@@ -15,34 +15,34 @@ class Rectangle:
         if isinstance(width, tuple):
             if len(width) != 2:
                 raise ValueError("Tuple should contain width and height")
-            self.width, self.height = width
+            self.width, self.height = width, height
         else:
             self.width = width
             self.height = height
 
 
-        @property
-        def width(self):
-            """get the size"""
-            return (self.__width)
+    @property
+    def width(self):
+        """get the size"""
+        return (self.width)
 
-        @width.setter
-        def width(self, value):
-            if not isinstance(value, int):
-                raise TypeError("size must be an integer")
-            elif value < 0:
-                raise ValueError("size must be >= 0")
-            self.__width = value
+    @width.setter
+    def width(self, value):
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        self.width = value
 
-        @property
-        def height(self):
-            """get the size"""
-            return (self.__height)
+    @property
+    def height(self):
+        """get the size"""
+        return (self.height)
 
-        @height.setter
-        def height(self, value):
-            if not isinstance(value, int):
-                raise TypeError("size must be an integer")
-            elif value < 0:
-                raise ValueError("size must be >= 0")
-            self.__height = value
+    @height.setter
+    def height(self, value):
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        self.height = value
