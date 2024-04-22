@@ -5,8 +5,9 @@
 class Rectangle:
     """Initialize a new Rectangle.
 
+
     Args:
-        width (int or tuple): The width of the new Rectangle. If a tuple is provided, it should contain (width, height).
+        width (int or tuple): the tuple containing width and height.
         height (int): The height of the new Rectangle.
     """
     def __init__(self, _width=0, _height=0):
@@ -27,7 +28,6 @@ class Rectangle:
         elif _width < 0:
             raise ValueError("size must be >= 0")
         self._width = _width
-        
 
     @property
     def width(self):
