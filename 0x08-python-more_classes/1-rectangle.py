@@ -2,6 +2,7 @@
 
 """Define a Rectangle."""
 
+
 class Rectangle:
     """Initialize a new Rectangle.
 
@@ -19,14 +20,14 @@ class Rectangle:
             self.__width = _width
             self.__height = _height
         if not isinstance(_height, int):
-            raise TypeError("size must be an integer")
+            raise TypeError("height must be an integer")
         elif _height < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError("height must be >= 0")
         self._height = _height
         if not isinstance(_width, int):
-            raise TypeError("size must be an integer")
+            raise TypeError("width must be an integer")
         elif _width < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError("width must be >= 0")
         self._width = _width
 
     @property
