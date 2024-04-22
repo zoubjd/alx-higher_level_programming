@@ -14,10 +14,12 @@ class Rectangle:
 
         if isinstance(width, tuple):
             if len(width) != 2:
-                raise ValueError("Tuple should contain (width, height)")
-            width, height = width
-        self.width = width
-        self.height = height
+                raise ValueError("Tuple should contain width and height")
+            self.width, self.height = width
+        else:
+            self.width = width
+            self.height = height
+
 
         @property
         def width(self):
