@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """CHEcks for weither """
 
+
 def is_same_class(obj, a_class):
     """returns true if obj and a_classe are the same
     Args:
@@ -10,4 +11,4 @@ def is_same_class(obj, a_class):
     Return: True or False
     """
 
-    return isinstance(obj, a_class)
+    return type(obj) == a_class
