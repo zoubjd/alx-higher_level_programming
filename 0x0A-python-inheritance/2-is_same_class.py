@@ -2,7 +2,12 @@
 """CHEcks for weither """
 
 def is_same_class(obj, a_class):
-    if(isinstance(obj, a_class)):
-        return True
-    else:
-        return False
+    """returns true if obj and a_classe are the same
+    Args:
+    a: the object
+    a_class: the class to be tested
+
+    Return: True or False
+    """
+
+    return isinstance(obj, a_class)
