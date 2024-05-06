@@ -2,6 +2,7 @@
 """a model of a class"""
 from models.base import Base
 
+
 class Rectangle(Base):
     """A class representing a rectangle."""
 
