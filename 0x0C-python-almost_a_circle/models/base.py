@@ -18,4 +18,3 @@ class Base:
     def get_id(self):
         """a method to get the id attribute"""
         return self.__id
-
