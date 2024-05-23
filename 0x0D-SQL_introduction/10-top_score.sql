@@ -1,4 +1,4 @@
 -- list by best
-SELECT s.id, s.name, s.score
+SELECT s.score, s.name
 FROM second_table s
 ORDER BY score DESC;
