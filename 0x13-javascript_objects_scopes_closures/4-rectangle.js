@@ -19,7 +19,8 @@ class Rectangle {
     this.width = this.height;
     this.height = tmp;
   }
-/*this is a comment*/
+
+  /* this is a comment */
   double () {
     this.width *= 2;
     this.height *= 2;
