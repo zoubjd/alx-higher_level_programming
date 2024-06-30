@@ -16,7 +16,7 @@ if __name__ == '__main__':
                            passwd=mysql_pwd,
                            db=mysql_db)
     cursor = conn.cursor()
-    cursor.execute({"SELECT * FROM states WHERE name = %s ORDER BY id ASC"}
+    cursor.execute("SELECT * FROM states WHERE name = {} ORDER BY id ASC"
                    .format(word))
     rows = cursor.fetchall()
     for row in rows:
