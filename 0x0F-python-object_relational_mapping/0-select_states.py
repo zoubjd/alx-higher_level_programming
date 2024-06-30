@@ -9,7 +9,11 @@ if __name__ == '__main__':
     mysql_pwd = argv[2]
     mysql_db = argv[3]
 
-    conn = MySQLdb.connect(host="localhost", port=3306, user=mysql_usr, passwd=mysql_pwd, db=mysql_db)
+    conn = MySQLdb.connect(host="localhost",
+                           port=3306,
+                           user=mysql_usr,
+                           passwd=mysql_pwd,
+                           db=mysql_db)
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
     rows = cursor.fetchall()
