@@ -1,0 +1,27 @@
+#!/usr/bin/python3
+"""   State object with the name passed as argument """
+
+from sys import argv
+from sqlalchemy import create_engine
+from sqlalchemy.orm.session import sessionmaker, Session
+from model_state import Base, State
+
+
+if __name__ == "__main__":
+    password = argv[1]
+    username = argv[2]
+    database = argv[3]
+    state = argv[4]
+
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
+                           .format(username, password, database))
+
+    Session = sessionmaker(bind=engine)
+    session = Session()
+
+    state = session.query(State).filter(State.name == state).first()
+    if state is not None:
+        print('{}'.format(state.id))
+    else:
+        print('Not found')
+    session.close()
