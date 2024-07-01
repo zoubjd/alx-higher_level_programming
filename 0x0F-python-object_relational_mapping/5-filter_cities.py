@@ -23,4 +23,5 @@ if __name__ == '__main__':
                     ORDER BY cities.id ASC".format(state))
     rows = cursor.fetchall()
     for row in rows:
-        print(row)
+        for city in row:
+            print(city)
