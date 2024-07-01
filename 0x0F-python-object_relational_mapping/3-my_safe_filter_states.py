@@ -3,7 +3,6 @@
 from sys import argv
 import MySQLdb
 
-
 if __name__ == '__main__':
     if len(argv) != 5:
         print("Usage: ./3-my_safe_filter_states.py <username> <password> \
@@ -21,8 +20,10 @@ if __name__ == '__main__':
                                passwd=mysql_pwd,
                                db=mysql_db)
         cursor = conn.cursor()
-        cursor.execute("SELECT * FROM states WHERE BINARY name = '{}'\
-                       ORDER BY id ASC".format(word))
+        query = "SELECT * FROM states WHERE BINARY name = %s ORDER BY id ASC"
+        cursor.execute(query, (word,))
         rows = cursor.fetchall()
         for row in rows:
             print(row)
+        cursor.close()
+        conn.close()
