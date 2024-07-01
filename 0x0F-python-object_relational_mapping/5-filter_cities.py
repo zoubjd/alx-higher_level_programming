@@ -9,6 +9,7 @@ if __name__ == '__main__':
     mysql_pwd = argv[2]
     mysql_db = argv[3]
     state = argv[4]
+    cities = []
 
     conn = MySQLdb.connect(host="localhost",
                            port=3306,
@@ -24,4 +25,7 @@ if __name__ == '__main__':
     rows = cursor.fetchall()
     for row in rows:
         for city in row:
-            print(city)
+            cities.append(city)
+    print(", ".join(cities))
+    cursor.close()
+    conn.close()
