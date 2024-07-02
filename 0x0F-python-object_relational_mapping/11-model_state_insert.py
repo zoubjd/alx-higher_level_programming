@@ -11,7 +11,7 @@ if __name__ == "__main__":
     password = argv[1]
     username = argv[2]
     database = argv[3]
-    state = "“Louisiana”"
+    state = "Louisiana"
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(username, password, database))
