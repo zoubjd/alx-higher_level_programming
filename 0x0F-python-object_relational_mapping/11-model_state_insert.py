@@ -2,7 +2,7 @@
 """   adds the State object “Louisiana” to the database """
 
 from sys import argv
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, insert
 from sqlalchemy.orm.session import sessionmaker, Session
 from model_state import Base, State
 
