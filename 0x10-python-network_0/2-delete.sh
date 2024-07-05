@@ -1,3 +1,3 @@
 #!/bin/bash
-# Make request, display response
+# delete request
 curl -sX DELETE "$1"
