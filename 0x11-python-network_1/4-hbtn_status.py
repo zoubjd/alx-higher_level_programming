@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""Python script that fetches"""
+"""Python script that fetche using request"""
 import request
 
 
 if __name__ == "__main__":
-    with request.urlopen('https://alx-intranet.hbtn.io/status') as response:
-        html = response.read()
-        print('Body response:')
-        print('\t- type: {}'.format(type(html)))
-        print('\t- content: {}'.format(html))
+
+    resp = request.get('https://alx-intranet.hbtn.io/status')
+    print("Body response:")
+    print("\t- type: {}".format(type(resp)))
+    print("\t- content: {}".format(resp))
+    print("\t- utf8 content: {}".format(resp.read().decode('utf-8')))
