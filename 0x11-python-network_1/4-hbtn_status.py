@@ -1,12 +1,15 @@
 #!/usr/bin/python3
-"""Python script that fetche using request"""
-import request
+"""Fetch url using requests module"""
+
+import requests
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 
-    resp = request.get('https://alx-intranet.hbtn.io/status')
-    print("Body response:")
-    print("\t- type: {}".format(type(resp)))
-    print("\t- content: {}".format(resp))
-    print("\t- utf8 content: {}".format(resp.read().decode('utf-8')))
+    url = 'https://intranet.hbtn.io/status'
+
+    response = requests.get(url)
+
+    print('Body response:')
+    print('\t- type: {}'.format(type(response.text)))
+    print('\t- content: {}'.format(response.text))
